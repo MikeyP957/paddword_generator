@@ -26,6 +26,23 @@ var allCharacters = {
 var passwordCharacter = [];
 var passwordLength = Number;
 
+//Functions  
+   
+function userInput(){
+  var userChoiceLength = prompt("How long do you want your password? (Choose a number between 8 and 128")
+  var userChoiceLower = confirm("Do you want to include lowercase characters?")
+  var userChoiceUpper = confirm("Do you want to include numbers?")
+  var userChoiceDigits = confirm("Do you want to include numbers?")
+  var userChoiceSpecial = confirm("Do you want to include special characters?")
+  var options = {
+    userChoiceLength: parseInt(userChoiceLength),
+    userChoiceLower: userChoiceLower,
+    userChoiceUpper: userChoiceUpper,
+    userChoiceDigits: userChoiceDigits,
+    userChoiceSpecial: userChoiceSpecial,
+   }
+  return options;
+  };
 //use a random number generator to choose one of the properties
 //ask the user how strong they want their password
 //create that many by calling the object x many times(while loop or for loop?)
