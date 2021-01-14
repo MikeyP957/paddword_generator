@@ -10,7 +10,18 @@ var allCharacters = {
   allDigits : ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
   specialCharacters : ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_"],
   specialCharactersSecond : ["=", "+", "[", "{", "]", "}", ";", ";", ":", "/", ",", ">", "<", "?"],
-  };
+  randomCharacterMethod : function(){
+    //all properties are in this array
+      let allSelectedProperties = [this.letterLower, this.letterLowerSecond, 
+        this.letterUpper, this.letterUpperSecond, this.allDigits, 
+        this.specialCharacters, this.specialCharactersSecond];
+    //a random property is chosen
+      let randomSeclector = allSelectedProperties[Math.floor(Math.random()* allSelectedProperties.length)];
+    //a random element of the chosen property
+      let randomCharacter = randomSeclector[Math.floor(Math.random()* randomSeclector.length)];
+    return randomCharacter
+    }  
+};
 
 //use a random number generator to choose one of the properties
 //ask the user how strong they want their password
