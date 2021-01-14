@@ -1,15 +1,16 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-//object that contains uppercase, lowercase, numbers, special cases
-var character = {
-  letterLower: ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-  letterUpper: toUpperCase(letterLower)
-  allDigits: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  specialCharacters: ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "{", "]", "}", "", ";", ";", ":", "/", ",", ">", "<", "?"]
-
-//possibly give the object a method that randomly outputs a letter,number or character
-//use a random number generator to choose one of the properties
-};
+//Global variables
+var allCharacters = {
+  //I broke these into two groups so that the arrays were more even in length
+  letterLower : ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"], 
+  letterLowerSecond :["n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
+  letterUpper : ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"],
+  letterUpperSecond : [ "N", "O", "P", "Q", "R", "S", "T", "U", "I", "W", "X", "Y", "Z"],
+  allDigits : ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+  specialCharacters : ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_"],
+  specialCharactersSecond : ["=", "+", "[", "{", "]", "}", ";", ";", ":", "/", ",", ">", "<", "?"],
+  };
 
 //use a random number generator to choose one of the properties
 //ask the user how strong they want their password
