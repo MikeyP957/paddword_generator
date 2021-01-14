@@ -35,8 +35,8 @@
       //a random element of the chosen property
         let randomCharacter = randomSeclector[Math.floor(Math.random()* randomSeclector.length)];
       return randomCharacter
-    };  
-  }
+    }  
+  };
 
   var randomUpper = {
     //I just copy and paste from above
@@ -50,6 +50,7 @@
       //a random element of the chosen property
         let randomCharacter = randomSeclector[Math.floor(Math.random()* randomSeclector.length)];
       return randomCharacter
+    }
   };
   //An array where the password is stored
   var passwordCharacter = [];
