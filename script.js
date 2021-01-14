@@ -22,6 +22,9 @@ var allCharacters = {
     return randomCharacter
     }  
 };
+//   //An array where the password is stored
+var passwordCharacter = [];
+var passwordLength = Number;
 
 //use a random number generator to choose one of the properties
 //ask the user how strong they want their password
