@@ -21,7 +21,35 @@
       //a random element of the chosen property
         let randomCharacter = randomSeclector[Math.floor(Math.random()* randomSeclector.length)];
       return randomCharacter
-      }  
+      } 
+  };
+  var randomLower = {
+    //I just copy and paste from above
+    letterLower : ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"], 
+    letterLowerSecond :["n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
+    randomCharacterMethod : function(){
+      //all properties are in this array
+        let allSelectedProperties = [this.letterLower, this.letterLowerSecond];
+      //a random property is chosen
+        let randomSeclector = allSelectedProperties[Math.floor(Math.random()* allSelectedProperties.length)];
+      //a random element of the chosen property
+        let randomCharacter = randomSeclector[Math.floor(Math.random()* randomSeclector.length)];
+      return randomCharacter
+    };  
+  }
+
+  var randomUpper = {
+    //I just copy and paste from above
+    letterUpper : ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"],
+    letterUpperSecond : [ "N", "O", "P", "Q", "R", "S", "T", "U", "I", "W", "X", "Y", "Z"],
+    randomCharacterMethod : function(){
+      //all properties are in this array
+        let allSelectedProperties = [this.letterUpper, this.letterUpperSecond];
+      //a random property is chosen
+        let randomSeclector = allSelectedProperties[Math.floor(Math.random()* allSelectedProperties.length)];
+      //a random element of the chosen property
+        let randomCharacter = randomSeclector[Math.floor(Math.random()* randomSeclector.length)];
+      return randomCharacter
   };
   //An array where the password is stored
   var passwordCharacter = [];
