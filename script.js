@@ -54,6 +54,11 @@ function userInput(){
   };
   passwordLength = userChosenLength();
   
+  //pushes random characters to array
+  //the loop is set to continue until the legnth that the use chose
+  for (var i = 0; i < passwordLength; i++){
+    passwordCharacter.push(allCharacters.randomCharacterMethod());
+  };
 //use a random number generator to choose one of the properties
 //ask the user how strong they want their password
 //create that many by calling the object x many times(while loop or for loop?)
