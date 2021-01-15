@@ -12,4 +12,4 @@ If the user chooses a password that is too small (less than 8), or too long (mor
 The website and style was provided. The work that I did can be seen in the JavaScript file. I referenced Mozilla Developer Network and W3Schools to improve my use of functions, variables, loops, objects and arrays.
 
 ## Deployment
-This app if fully functional with no errors.
+This app if fully functional with one error. If the user types in a sentance when asking for the length the program does not work. This might be due to the parseInt() function used on the user input to change the string into a number.
