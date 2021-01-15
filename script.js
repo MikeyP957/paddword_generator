@@ -37,10 +37,11 @@
   //An array where the password is stored
   var passwordCharacter = [];
   //Where all user input is stored
-  var userCritereaObj = userInput();
+  var userCriteriaObj = userInput();
   //where the desired length is stored
   var passwordLength = Number;
-
+  //array of array of character to randomize and populate an array with
+  var 
 //Functions  
    
 function userInput(){  
@@ -68,35 +69,26 @@ function userInput(){
   };
   passwordLength = userChosenLength();
   
-//Takes user criterea and pushes each object into an array.
-function randomCharacterSelector(){
-  let criterea = userCritereaObj;
-  let confirmedCriterea = [];
+//Takes user criteria and pushes each object into an array.
+function meetUserCriteria(){
+  let criteria = userCriteriaObj;
+  let confirmedCriteria = [];
   
-  if (criterea.userChoiceLower === true){
-    confirmedCriterea.push(randomLower.letterLower)
+  if (criteria.userChoiceLower === true){
+    confirmedCriteria.push(randomLower.letterLower)
   }  
-  if (criterea.userChoiceUpper === true){
-    confirmedCriterea.push(randomUpper.letterUpper)
+  if (criteria.userChoiceUpper === true){
+    confirmedCriteria.push(randomUpper.letterUpper)
   }
-  if (criterea.userChoiceDigits === true){
-    confirmedCriterea.push(randomDigit.allDigits)
+  if (criteria.userChoiceDigits === true){
+    confirmedCriteria.push(randomDigit.allDigits)
   }
-  if (criterea.userChoiceSpecial === true){
-    confirmedCriterea.push(randomSpecialCharacter.allSpecialCharacters)
+  if (criteria.userChoiceSpecial === true){
+    confirmedCriteria.push(randomSpecialCharacter.allSpecialCharacters)
   }
-  return confirmedCriterea
+  return confirmedCriteria
 }
-console.log(randomCharacterSelector())
-  //pushes random characters to array
-  //the loop is set to continue until the legnth that the use chose
-  // for (var i = 0; i < passwordLength; i++){
-  //   passwordCharacter.push(allCharacters.randomCharacterMethod());
-  // };
-//use a random number generator to choose one of the properties
-//ask the user how strong they want their password
-//create that many by calling the object x many times(while loop or for loop?)
-//or create an empty array, fill it with the random character and iterate the array
+
 
 // Write password to the #password input
 
