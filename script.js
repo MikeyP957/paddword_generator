@@ -37,7 +37,7 @@
 
  var password = userInput();
 //Functions  
-   
+   //calling this will generate the password with the user input 
 function userInput(){  
   var userChoiceLength = prompt("How long do you want your password? (Choose a number between 8 and 128")
   var userChoiceLower = confirm("Do you want to include lowercase characters?")
@@ -51,6 +51,12 @@ function userInput(){
     userChoiceUpper: userChoiceUpper,
     userChoiceDigits: userChoiceDigits,
     userChoiceSpecial: userChoiceSpecial,
+   }
+   if(userChoiceLower === false && userChoiceUpper === false && userChoiceDigits === false && userChoiceSpecial === false){
+     return alert("You must choose one character type!")
+   }
+   if(parseInt(userChoiceLength) < 8 || parseInt(userChoiceLength) > 128) {
+     return alert("You must choose a number between 8 and 128!")
    }
   return generatePassword(options);
   };
