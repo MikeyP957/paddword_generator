@@ -34,14 +34,7 @@
       return randomCharacter
     }
   };
-  //An array where the password is stored
-  var passwordCharacter = [];
-  //Where all user input is stored
-  var userCriteriaObj = userInput();
-  //where the desired length is stored
-  var passwordLength = Number;
-  //array of array of character to randomize and populate an array with
-  var 
+ 
 //Functions  
    
 function userInput(){  
@@ -94,11 +87,11 @@ function randomizeAndPopulate(){
   let scrableArray = meetUserCriteria()
   let randomArray = scrableArray[Math.floor(Math.random()* scrableArray.length)];
   let randomCharacter = randomArray[Math.floor(Math.random()* randomArray.length)];
-  for (i = 0; i < passwordLength; i++){
-    passwordCharacter.push(randomCharacter)
-  }
+  return randomCharacter
 }
-
+for (i = 0; i < passwordLength; i++){
+  passwordArray.push(passwordCharacter)
+}
 // Write password to the #password input
 
 function writePassword() {
