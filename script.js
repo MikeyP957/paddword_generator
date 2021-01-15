@@ -68,11 +68,31 @@ function userInput(){
   };
   passwordLength = userChosenLength();
   
+//Takes user criterea and pushes each object into an array.
+function randomCharacterSelector(){
+  let criterea = userCritereaObj;
+  let confirmedCriterea = [];
+  
+  if (criterea.userChoiceLower === true){
+    confirmedCriterea.push(randomLower.letterLower)
+  }  
+  if (criterea.userChoiceUpper === true){
+    confirmedCriterea.push(randomUpper.letterUpper)
+  }
+  if (criterea.userChoiceDigits === true){
+    confirmedCriterea.push(randomDigit.allDigits)
+  }
+  if (criterea.userChoiceSpecial === true){
+    confirmedCriterea.push(randomSpecialCharacter.allSpecialCharacters)
+  }
+  return confirmedCriterea
+}
+console.log(randomCharacterSelector())
   //pushes random characters to array
   //the loop is set to continue until the legnth that the use chose
-  for (var i = 0; i < passwordLength; i++){
-    passwordCharacter.push(allCharacters.randomCharacterMethod());
-  };
+  // for (var i = 0; i < passwordLength; i++){
+  //   passwordCharacter.push(allCharacters.randomCharacterMethod());
+  // };
 //use a random number generator to choose one of the properties
 //ask the user how strong they want their password
 //create that many by calling the object x many times(while loop or for loop?)
