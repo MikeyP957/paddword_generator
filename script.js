@@ -53,9 +53,9 @@ function userInput(){
     userChoiceSpecial: userChoiceSpecial,
    }
    if(userChoiceLower === false && userChoiceUpper === false && userChoiceDigits === false && userChoiceSpecial === false){
-     return alert("You must choose one character type!")
+     return alert("You must choose at least one character type!")
    }
-   if(parseInt(userChoiceLength) < 8 || parseInt(userChoiceLength) > 128) {
+   if(parseInt(userChoiceLength) < 8 || parseInt(userChoiceLength) > 128) || parseInt(userChoiceLength)===!Number {
      return alert("You must choose a number between 8 and 128!")
    }
   return generatePassword(options);
