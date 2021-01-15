@@ -57,7 +57,6 @@ function userInput(){
    
 //Takes user criteria and pushes each object into an array.
 function meetUserCriteria(){
-  let criteria = userCriteriaObj;
   let confirmedCriteria = [];
   
   if (criteria.userChoiceLower === true){
@@ -74,7 +73,8 @@ function meetUserCriteria(){
   }
   return confirmedCriteria
 }
-
+//this function takes in the criteria and return a string that is a 
+//random assortment of characters
 function generatePassword(options){
   let characterArray = meetUserCriteria(options);
   let populatedArray = [];
