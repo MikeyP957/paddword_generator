@@ -56,19 +56,19 @@ function userInput(){
   };
    
 //Takes user criteria and pushes each object into an array.
-function meetUserCriteria(){
+function meetUserCriteria(options){
   let confirmedCriteria = [];
   
-  if (criteria.userChoiceLower === true){
+  if (options.userChoiceLower === true){
     confirmedCriteria.push(randomLower.letterLower)
   }  
-  if (criteria.userChoiceUpper === true){
+  if (options.userChoiceUpper === true){
     confirmedCriteria.push(randomUpper.letterUpper)
   }
-  if (criteria.userChoiceDigits === true){
+  if (options.userChoiceDigits === true){
     confirmedCriteria.push(randomDigit.allDigits)
   }
-  if (criteria.userChoiceSpecial === true){
+  if (options.userChoiceSpecial === true){
     confirmedCriteria.push(randomSpecialCharacter.allSpecialCharacters)
   }
   return confirmedCriteria
@@ -92,8 +92,8 @@ function generatePassword(options){
 
 // Write password to the #password input
 
-function writePassword() {
-  var password = generatePassword();
+function writePassword(password) {
+  var password = userInput();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
