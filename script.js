@@ -89,6 +89,15 @@ function meetUserCriteria(){
   return confirmedCriteria
 }
 
+function randomizeAndPopulate(){
+  meetUserCriteria()
+  let scrableArray = meetUserCriteria()
+  let randomArray = scrableArray[Math.floor(Math.random()* scrableArray.length)];
+  let randomCharacter = randomArray[Math.floor(Math.random()* randomArray.length)];
+  for (i = 0; i < passwordLength; i++){
+    passwordCharacter.push(randomCharacter)
+  }
+}
 
 // Write password to the #password input
 
