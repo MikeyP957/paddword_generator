@@ -58,9 +58,6 @@ function userInput(){
    if(parseInt(userChoiceLength) < 8 || parseInt(userChoiceLength) > 128) {
      return alert("You must choose a number between 8 and 128!")
    }
-   if(parseInt(userChoiceLength) == String || Array || Boolean){
-     return alert("You must choose a number between 8 and 128!")
-   }
   return generatePassword(options);
   };
    
