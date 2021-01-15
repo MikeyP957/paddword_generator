@@ -34,7 +34,8 @@
       return randomCharacter
     }
   };
- 
+
+ var password = userInput();
 //Functions  
    
 function userInput(){  
@@ -51,17 +52,9 @@ function userInput(){
     userChoiceDigits: userChoiceDigits,
     userChoiceSpecial: userChoiceSpecial,
    }
-  return options;
+  return generatePassword(options);
   };
-  
-  //This returns the users' choice length
-  function userChosenLength () {
-    let takeInput = userInput();
-    let returnLength = takeInput.userChoiceLength
-    return (returnLength);
-  };
-  passwordLength = userChosenLength();
-  
+   
 //Takes user criteria and pushes each object into an array.
 function meetUserCriteria(){
   let criteria = userCriteriaObj;
@@ -82,16 +75,21 @@ function meetUserCriteria(){
   return confirmedCriteria
 }
 
-function randomizeAndPopulate(){
-  meetUserCriteria()
-  let scrableArray = meetUserCriteria()
-  let randomArray = scrableArray[Math.floor(Math.random()* scrableArray.length)];
-  let randomCharacter = randomArray[Math.floor(Math.random()* randomArray.length)];
-  return randomCharacter
+function generatePassword(options){
+  let characterArray = meetUserCriteria(options);
+  let populatedArray = [];
+  let passwordLength = options.userChoiceLength
+  
+  console.log(characterArray, "character array")
+  console.log(options, "options")
+  for (i = 0; i < passwordLength; i++) {
+  let randomIndex = characterArray[Math.floor(Math.random()* characterArray.length)];
+  let randomCharacter = randomIndex[Math.floor(Math.random()* randomIndex.length)];
+    populatedArray.push(randomCharacter)
+  }
+  return populatedArray.join("")
 }
-for (i = 0; i < passwordLength; i++){
-  passwordArray.push(passwordCharacter)
-}
+
 // Write password to the #password input
 
 function writePassword() {
